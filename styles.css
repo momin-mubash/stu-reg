@@ -1,0 +1,152 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f0f4f8;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow-y: auto;
+}
+
+.main-heading {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.enrollment-form,
+.enrolled-students {
+    width: 48%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.gender-options,
+.skills-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.enrolled-students h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.enrolled-students .student {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.enrolled-students .student div {
+    width: 100%;
+}
+
+.enrolled-students img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: 100vh;
+    }
+
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enrollment-form,
+    .enrolled-students {
+        width: 100%;
+    }
+
+    .enrolled-students .student {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .enrolled-students img {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .buttons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main-heading {
+        font-size: 1.5rem;
+    }
+
+    form {
+        padding: 0 10px;
+    }
+}
